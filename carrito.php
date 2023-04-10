@@ -11,17 +11,12 @@ if(!isset($_SESSION['carrito']) || empty($_SESSION['carrito'])) {
     // Mostrar los productos del carrito
     echo "<h2>Carrito de compras</h2>";
     echo "<ul>";
+    $total = 0;
     foreach($_SESSION['carrito'] as $producto) {
         echo "<li>{$producto['nombre']} - Precio: {$producto['precio']} - Cantidad: {$producto['cantidad']}</li>";
         $total += $producto['precio'] * $producto['cantidad']; // Calcular el total tomando en cuenta la cantidad
     }
     echo "</ul>";
-
-    // Calcular el total del carrito
-    $total = 0;
-    foreach($_SESSION['carrito'] as $producto) {
-        $total += $producto['precio'];
-    }
 
     // Mostrar el total del carrito
     echo "<p>Total del carrito: $ {$total}</p>";
@@ -39,4 +34,4 @@ echo "</form>";
 </form>
 <?php
     include 'footer.php';
-?>  
+?>
