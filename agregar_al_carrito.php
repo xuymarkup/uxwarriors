@@ -31,5 +31,5 @@ echo "<h2>Carrito de compras</h2>";
     }
     echo "</ul>";
 //header("Location: producto.php?id={$id_producto}");
-exit();
+// exit();
 ?>
