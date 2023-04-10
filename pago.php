@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($pago_exitoso) {
         // Aquí puedes agregar código para actualizar el inventario de los productos y registrar la venta
         $_SESSION['carrito'] = array(); // Limpia el carrito
-        header("Location: confirmacion.php");
+        header("Location: confirmacion_pago.php");
         exit();
     }
     // Si el pago no fue exitoso, muestra un mensaje de error
