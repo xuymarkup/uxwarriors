@@ -22,14 +22,6 @@ if(isset($_SESSION['carrito'][$id_producto])) {
 }
 
 // Redirigir al producto
-echo "<h2>Carrito de compras</h2>";
-    echo "<ul>";
-    $total = 0;
-    foreach($_SESSION['carrito'] as $producto) {
-        echo "<li>{$producto['nombre']} - Precio: {$producto['precio']} - Cantidad: {$producto['cantidad']}</li>";
-        $total += $producto['precio'] * $producto['cantidad']; // Calcular el total tomando en cuenta la cantidad
-    }
-    echo "</ul>";
-//header("Location: producto.php?id={$id_producto}");
-// exit();
+header("Location: producto.php?id={$id_producto}");
+exit();
 ?>

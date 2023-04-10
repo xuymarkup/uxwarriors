@@ -19,6 +19,8 @@ echo "<p>Precio: {$fila['precio']}</p>";
 echo "<p>SKU: {$fila['sku']}</p>";
 echo "<img src='{$fila['imagen']}' alt='{$fila['nombre']}' />";
 
+echo '<pre>'; print_r( $_SESSION['carrito']); echo '</pre>';
+
 mysqli_close($conn);
 ?>
 <form method="POST" action="agregar_al_carrito.php">
