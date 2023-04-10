@@ -19,23 +19,6 @@ echo "<p>Precio: {$fila['precio']}</p>";
 echo "<p>SKU: {$fila['sku']}</p>";
 echo "<img src='{$fila['imagen']}' alt='{$fila['nombre']}' />";
 
-// Comprobar si se ha enviado el formulario para agregar al carrito
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     // Obtener la cantidad deseada
-//     $cantidad = $_POST['cantidad'];
-
-//     // Iniciar o continuar sesión para el carrito
-//     session_start();
-
-//     // Agregar el producto y la cantidad al carrito
-//     $_SESSION['carrito'][$fila['id']] = $cantidad;
-
-//     // Redirigir a la página del carrito
-//     header("Location: carrito.php");
-//     exit();
-// }
-// Cerrar la conexión a la base de datos
-echo '<pre>'; print_r( $_SESSION['carrito']); echo '</pre>';
 mysqli_close($conn);
 ?>
 <form method="POST" action="agregar_al_carrito.php">
@@ -48,5 +31,5 @@ mysqli_close($conn);
 </form>
 
 <?php
-    include 'footer.php';
-?>  
+include 'footer.php';
+?>
