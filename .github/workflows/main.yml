@@ -8,7 +8,7 @@ jobs:
     name: FTP-Deply-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@2.1.0
+    - uses: actions/checkout@v2.1.0
       with:
         fech-depth: 2
     - name: FTP-Deploy-Action
