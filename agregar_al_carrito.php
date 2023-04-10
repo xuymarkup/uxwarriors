@@ -1,27 +1,32 @@
 <?php
+// Iniciar sesión
+session_start();
+
 // Obtener los datos del producto
 $id_producto = $_POST['id_producto'];
 $nombre_producto = $_POST['nombre_producto'];
 $precio_producto = $_POST['precio_producto'];
 $cantidad_producto = $_POST['cantidad_producto'];
 
-// Verificar si el carrito existe en la sesión, sino crearlo
+// Verificar si el carrito ya existe, si no crearlo
 if(!isset($_SESSION['carrito'])) {
     $_SESSION['carrito'] = array();
 }
 
-// Verificar si el producto ya está en el carrito, sino agregarlo
+// Verificar si el producto ya existe en el carrito
 if(isset($_SESSION['carrito'][$id_producto])) {
-    $_SESSION['carrito'][$id_producto]['cantidad'] += $cantidad_producto; // Sumar la cantidad
+    // Si existe, sumar la cantidad
+    $_SESSION['carrito'][$id_producto]['cantidad'] += $cantidad_producto;
 } else {
+    // Si no existe, agregar el producto al carrito
     $_SESSION['carrito'][$id_producto] = array(
+        'id' => $id_producto,
         'nombre' => $nombre_producto,
         'precio' => $precio_producto,
-        'cantidad' => $cantidad_producto // Agregar la cantidad
+        'cantidad' => $cantidad_producto
     );
 }
 
-// Redirigir al producto
-header("Location: producto.php?id={$id_producto}");
-exit();
+// Redirigir al usuario al carrito de compras
+header("Location: carrito.php");
 ?>
