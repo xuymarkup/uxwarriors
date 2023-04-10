@@ -1,9 +1,5 @@
 <?php
-$archivo = __DIR__ . "/config.ini";
-
-$contenido = parse_ini_file($archivo, true);
-echo $contenido[DB_HOST];
-$servername = $contenido[DB_HOST];
+$servername = "localhost";
 $username = "tiendac2_test";
 $password = "password_db@";
 $dbname = "tiendac2_test";
