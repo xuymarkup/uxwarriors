@@ -9,10 +9,14 @@ if (!isset($_SESSION['usuario'])) {
 }
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<title>Mi sitio web</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda en Linea</title>
 </head>
+<html>
 <body>
 	<header>
 		<?php include "menu.php"; ?>
