@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Registro de Usuario</title>
+<script src="validacion.js"></script>
+</head>
+<body>
+<h2>Registro de Usuario</h2>
+<form action="registro.php" method="post">
+<label>Nombre:</label>
+<input type="text" name="nombre" required minlength="2" maxlength="50"><br>
+<label>Apellidos:</label>
+<input type="text" name="apellidos" required minlength="2" maxlength="50"><br>
+<label>Correo electrónico:</label>
+<input type="email" name="email" required><br>
+<label>Contraseña:</label>
+<input type="password" name="password" required minlength="8"><br>
+<label>Confirmar contraseña:</label>
+<input type="password" name="confirm_password" required minlength="8"><br>
+<input type="submit" value="Registrarse">
+</form>
+</body>
+</html>
