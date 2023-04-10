@@ -1,0 +1,19 @@
+# Ignored files
+
+.cache
+node_modules
+package-lock.json
+yarn.lock
+.npmrc
+# System
+.DS_Store
+
+# Public
+
+public/*
+!public/static
+public/static/*
+!public/static/aspect-ratio-images/
+!public/static/sassdoc/
+!public/static/pwa/
+!public/static/pwa-tudn/
